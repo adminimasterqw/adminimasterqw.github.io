@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Andrésen</title>
+        <link>https://methiony.work</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 15 Nov 2020 18:43:49 +0800</pubDate>
+        <lastBuildDate>Sun, 15 Nov 2020 18:43:49 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://methiony.work/2020/11/15/MySQL-0/</guid>
+            <title>MySQL</title>
+            <link>https://methiony.work/2020/11/15/MySQL-0/</link>
+            <pubDate>Sun, 15 Nov 2020 18:43:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;mysql服务的登录和退出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql服务的登录和退出&#34;&gt;#&lt;/a&gt; MySql 服务的登录和退出&lt;/h2&gt;
+&lt;p&gt;​		方式一：通过 mysql 自带的客户端：只限于 root 用户&lt;/p&gt;
+&lt;p&gt;​		方式二：通过 Windows 自带的客户端：1、登录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mysql	[-h主机名	-p端口号]	-u用户名	-p 密码
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		退出：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;exit或ctrl + c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;mysql的常见命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql的常见命令&#34;&gt;#&lt;/a&gt; MySql 的常见命令&lt;/h2&gt;
+&lt;p&gt;​		1、查看当前所有的数据库：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;show	databases;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		2、打开指定的库：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;use	库名
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		3、查看当前库的所有表：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;show	tables;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		4、查看其他库的所有表：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;show	tables	from	库名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		5、创建表：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;create	table	表名(
+
+​						列名	列类型,
+
+​						列名	列类型,
+
+​						...
+
+​			)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		6、查看表结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;desc	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​		7、查看服务器的版本&lt;/p&gt;
+&lt;p&gt;​			方式一、登录到 mysql 服务端:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	version();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​			方式二、没有登录到 mysql 服务端:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mysql	--version或	mysql	--v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;进阶1基础查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进阶1基础查询&#34;&gt;#&lt;/a&gt; 进阶 1：基础查询&lt;/h3&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;特点：&lt;/p&gt;
+&lt;p&gt;1、查询列表可以是：表中的字段、常量值、表达式、函数&lt;/p&gt;
+&lt;p&gt;2、查询的结果是一个虚拟的表格&lt;/p&gt;
+&lt;p&gt;a、查询表中的单个字段：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;b、查询表中的多个字段：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表1,查询列表2,...	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;c、查询表中的所有字段：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	*	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;d、查询常量值：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	100;	select	&#39;john&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;e、查询表达式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	100%98;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;f、查询函数：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	version();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、起别名：便于理解、如果查询的字段有重名的情况，使用别名区分&lt;/p&gt;
+&lt;p&gt;a、使用 as&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	100%98	as	结果;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表1 as 别名,查询列表2 as 别名	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;b、使用空格&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表1  别名,查询列表2  别名	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、去重&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	distinct	查询列表	from	表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;进阶2条件查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进阶2条件查询&#34;&gt;#&lt;/a&gt; 进阶 2：条件查询&lt;/h3&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select	查询列表	from	表名	where	筛选条件;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;分类：&lt;/p&gt;
+&lt;p&gt;一、按条件表达式筛选&lt;/p&gt;
+&lt;p&gt;简单条件运算符：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;	&amp;lt;	=	!=	&amp;lt;&amp;gt;	&amp;gt;=	&amp;lt;=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;二、按逻辑表达式筛选&lt;/p&gt;
+&lt;p&gt;逻辑运算符：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;&amp;amp;	||	！	and	or	not
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;三、模糊查询&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;like	between	and	in	is	null
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;mysql的语法规范&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql的语法规范&#34;&gt;#&lt;/a&gt; Mysql 的语法规范&lt;/h2&gt;
+&lt;p&gt;​			1、不区分大小写，但建议关键词大写，表名、列名小写&lt;/p&gt;
+&lt;p&gt;​			2、每条命令最好用分号结尾&lt;/p&gt;
+&lt;p&gt;​			3、每条命令根据需要，可以进行缩进或换行&lt;/p&gt;
+&lt;p&gt;​			4、注释：a、单行注释：# 注释文字	b、单行注释：-- 注释文字	c、单行注释：/ *   注释文字   */&lt;/p&gt;
+&lt;p&gt;​			5、mysql 中的 + 号：只有作为运算符的功能&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://methiony.work/2020/11/06/hello-world/</guid>
+            <title>Hello World</title>
+            <link>https://methiony.work/2020/11/06/hello-world/</link>
+            <pubDate>Fri, 06 Nov 2020 08:20:44 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

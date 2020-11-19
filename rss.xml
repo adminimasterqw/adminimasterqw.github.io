@@ -5,8 +5,153 @@
         <link>https://methiony.work</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 15 Nov 2020 18:43:49 +0800</pubDate>
-        <lastBuildDate>Sun, 15 Nov 2020 18:43:49 +0800</lastBuildDate>
+        <pubDate>Thu, 19 Nov 2020 15:53:18 +0800</pubDate>
+        <lastBuildDate>Thu, 19 Nov 2020 15:53:18 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://methiony.work/2020/11/19/Hbase/</guid>
+            <title>Hbase</title>
+            <link>https://methiony.work/2020/11/19/Hbase/</link>
+            <pubDate>Thu, 19 Nov 2020 15:53:18 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;hbase基础系列1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hbase基础系列1&#34;&gt;#&lt;/a&gt; Hbase 基础系列（1）&lt;/h1&gt;
+&lt;h2 id=&#34;1-hbase定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-hbase定义&#34;&gt;#&lt;/a&gt; 1、 HBase 定义&lt;/h2&gt;
+&lt;p&gt;HBase 是一种分布式、可扩展、支持海量数据存储的 NoSQL 数据库。&lt;/p&gt;
+&lt;h2 id=&#34;2-hbase特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-hbase特点&#34;&gt;#&lt;/a&gt; 2、HBase 特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1. 海量存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hbase 适合存储 PB 级别的海量数据，在 PB 级别的数据以及采用廉价 PC 存储的情况下，能在几十到百毫秒内返回数据。这与 Hbase 的极易扩展性息息相关。正式因为 Hbase 良好的扩展性，才为海量数据的存储提供了便利。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2. 列式存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里的列式存储其实说的是列族存储，Hbase 是根据列族来存储数据的。列族下面可以有非常多的列，列族在创建表的时候就必须指定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3. 极易扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hbase 的扩展性主要体现在两个方面，一个是基于上层处理能力（RegionServer）的扩展，一个是基于存储的扩展（HDFS）。&lt;br /&gt;
+通过横向添加 RegionSever 的机器，进行水平扩展，提升 Hbase 上层的处理能力，提升 Hbsae 服务更多 Region 的能力。&lt;br /&gt;
+  备注：RegionServer 的作用是管理 region、承接业务的访问，这个后面会详细的介绍通过横向添加 Datanode 的机器，进行存储层扩容，提升 Hbase 的数据存储能力和提升后端存储的读写能力。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4. 高并发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于目前大部分使用 Hbase 的架构，都是采用的廉价 PC，因此单个 IO 的延迟其实并不小，一般在几十到上百 ms 之间。这里说的高并发，主要是在并发的情况下，Hbase 的单个 IO 延迟下降并不多。能获得高并发、低延迟的服务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5. 稀疏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;稀疏主要是针对 Hbase 列的灵活性，在列族中，你可以指定任意多的列，在列数据为空的情况下，是不会占用存储空间的。&lt;/p&gt;
+&lt;h2 id=&#34;3-hbase的数据模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-hbase的数据模型&#34;&gt;#&lt;/a&gt; 3、Hbase 的数据模型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzEuTmFtZQ==&#34;&gt;1.Name&lt;/span&gt; Space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;命名空间，类似于关系型数据库的 database 概念，每个命名空间下有多个表。HBase 两个自带的命名空间，分别是 hbase 和 default，hbase 中存放的是 HBase 内置的表，default 表是用户默认使用的命名空间。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2.Table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;类似于关系型数据库的表概念。不同的是，HBase 定义表时只需要声明列族即可，不需要声明具体的列。这意味着，往 HBase 写入数据时，字段可以动态、按需指定。因此，和关系型数据库相比，HBase 能够轻松应对字段变更的场景。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3.Row&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HBase 表中的每行数据都由一个 RowKey 和多个 Column（列）组成，数据是按照 RowKey 的字典顺序存储的，并且查询数据时只能根据 RowKey 进行检索，所以 RowKey 的设计十分重要。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4.Column&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HBase 中的每个列都由 Column Family (列族) 和 Column Qualifier（列限定符）进行限定，例如 info：name，info：age。建表时，只需指明列族，而列限定符无需预先定义。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5.Time Stamp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用于标识数据的不同版本（version），每条数据写入时，系统会自动为其加上该字段，其值为写入 HBase 的时间。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6.Cell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由 {rowkey, column Family：column Qualifier, time Stamp} 唯一确定的单元。cell 中的数据是没有类型的，全部是字节码形式存贮。&lt;/p&gt;
+&lt;h2 id=&#34;4-hbase架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-hbase架构&#34;&gt;#&lt;/a&gt; 4、 HBase 架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1.Client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Client 包含了访问 Hbase 的接口，另外 Client 还维护了对应的 cache 来加速 Hbase 的访问，比如 cache 的.META. 元数据的信息。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2.Zookeeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HBase 通过 Zookeeper 来做 master 的高可用、RegionServer 的监控、元数据的入口以及集群配置的维护等工作。具体工作如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过 Zoopkeeper 来保证集群中只有 1 个 master 在运行，如果 master 异常，会通过竞争机制产生新的 master 提供服务&lt;br /&gt;
+通过 Zoopkeeper 来监控 RegionServer 的状态，当 RegionSevrer 有异常的时候，通过回调的形式通知 MasterRegionServer 上下线的信息&lt;br /&gt;
+通过 Zoopkeeper 存储元数据的统一入口地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;3.Hmaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;master 节点的主要职责如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为 RegionServer 分配 Region&lt;br /&gt;
+ 维护整个集群的负载均衡&lt;br /&gt;
+维护集群的元数据信息&lt;br /&gt;
+发现失效的 Region，并将失效的 Region 分配到正常的 RegionServer 上&lt;br /&gt;
+当 RegionSever 失效的时候，协调对应 Hlog 的拆分&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;4.HregionServer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HregionServer 直接对接用户的读写请求，是真正的 “干活” 的节点。它的功能概括如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理 master 为其分配的 Region&lt;br /&gt;
+ 处理来自客户端的读写请求&lt;br /&gt;
+负责和底层 HDFS 的交互，&lt;br /&gt;
+存储数据到 HDFS&lt;br /&gt;
+ 负责 Region 变大以后的拆分&lt;br /&gt;
+负责 Storefile 的合并工作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;5.HDFS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HDFS 为 Hbase 提供最终的底层数据存储服务，同时为 HBase 提供高可用（Hlog 存储在 HDFS）的支持，具体功能概括如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提供元数据和表数据的底层分布式存储服务&lt;br /&gt;
+数据多副本，保证的高可靠和高可用性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;5-hbase中的角色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-hbase中的角色&#34;&gt;#&lt;/a&gt; 5、HBase 中的角色&lt;/h2&gt;
+&lt;h4 id=&#34;1-hmaster&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-hmaster&#34;&gt;#&lt;/a&gt; 1 HMaster&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;功能&lt;/li&gt;
+&lt;li&gt;1．监控 RegionServer&lt;/li&gt;
+&lt;li&gt;2．处理 RegionServer 故障转移&lt;/li&gt;
+&lt;li&gt;3．处理元数据的变更&lt;/li&gt;
+&lt;li&gt;4．处理 region 的分配或转移&lt;/li&gt;
+&lt;li&gt;5．在空闲时间进行数据的负载均衡&lt;/li&gt;
+&lt;li&gt;6．通过 Zookeeper 发布自己的位置给客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-regionserver&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-regionserver&#34;&gt;#&lt;/a&gt; 2 RegionServer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;功能&lt;/li&gt;
+&lt;li&gt;1．负责存储 HBase 的实际数据&lt;/li&gt;
+&lt;li&gt;2．处理分配给它的 Region&lt;/li&gt;
+&lt;li&gt;3．刷新缓存到 HDFS&lt;/li&gt;
+&lt;li&gt;4．维护 Hlog&lt;/li&gt;
+&lt;li&gt;5．执行压缩&lt;/li&gt;
+&lt;li&gt;6．负责处理 Region 分片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-其他组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-其他组件&#34;&gt;#&lt;/a&gt; 3. 其他组件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;1．Write-Ahead logs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HBase 的修改记录，当对 HBase 读写数据的时候，数据不是直接写进磁盘，它会在内存中保留一段时间（时间以及数据量阈值可以设定）。但把数据保存在内存中可能有更高的概率引起数据丢失，为了解决这个问题，数据会先写在一个叫做 Write-Ahead logfile 的文件中，然后再写入内存中。所以在系统出现故障的时候，数据可以通过这个日志文件重建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2．Region&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hbase 表的分片，HBase 表会根据 RowKey 值被切分成不同的 region 存储在 RegionServer 中，在一个 RegionServer 中可以有多个不同的 region。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3．Store&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HFile 存储在 Store 中，一个 Store 对应 HBase 表中的一个列族。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4．MemStore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;顾名思义，就是内存存储，位于内存中，用来保存当前的数据操作，所以当数据保存在 WAL 中之后，RegsionServer 会在内存中存储键值对。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5．HFile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是在磁盘上保存原始数据的实际的物理文件，是实际的存储文件。StoreFile 是以 Hfile 的形式存储在 HDFS 的。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://methiony.work/2020/11/15/MySQL-0/</guid>
             <title>MySQL</title>

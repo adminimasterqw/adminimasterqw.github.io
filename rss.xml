@@ -5,8 +5,113 @@
         <link>https://methiony.work</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 19 Nov 2020 15:53:18 +0800</pubDate>
-        <lastBuildDate>Thu, 19 Nov 2020 15:53:18 +0800</lastBuildDate>
+        <pubDate>Sat, 21 Nov 2020 15:20:24 +0800</pubDate>
+        <lastBuildDate>Sat, 21 Nov 2020 15:20:24 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://methiony.work/2020/11/21/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</guid>
+            <title></title>
+            <link>https://methiony.work/2020/11/21/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</link>
+            <pubDate>Sat, 21 Nov 2020 15:20:24 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;title: Hadoop 分布式集群搭建&lt;br /&gt;
+ date: 2020-11-21 15:20:24&lt;br /&gt;
+tags:&lt;/p&gt;
+&lt;h1 id=&#34;hadoop分布式集群搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hadoop分布式集群搭建&#34;&gt;#&lt;/a&gt; Hadoop 分布式集群搭建&lt;/h1&gt;
+&lt;h2 id=&#34;1-环境准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-环境准备&#34;&gt;#&lt;/a&gt; 1、环境准备&lt;/h2&gt;
+&lt;p&gt;首先准备了三台虚拟机（为了避免环境的干扰，都是新建的虚拟机），分别分配了 1G 内存、20G 硬盘、2 核 CPU，然后安装了 CentOS-7-x86_64-DVD-2009 操作系统，并配置了静态 IP 地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;集群规划：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;搭建的是 NameNode 与 ResourceManager 单节点架构。节点具体分别如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务器名称&lt;/th&gt;
+&lt;th&gt;IP 地址&lt;/th&gt;
+&lt;th&gt;NameNode&lt;/th&gt;
+&lt;th&gt;SecondaryNameNode&lt;/th&gt;
+&lt;th&gt;dataNode&lt;/th&gt;
+&lt;th&gt;ResourceManager&lt;/th&gt;
+&lt;th&gt;NodeManager&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;master&lt;/td&gt;
+&lt;td&gt;192.168.2.128&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;node01&lt;/td&gt;
+&lt;td&gt;192.168.2.129&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;node02&lt;/td&gt;
+&lt;td&gt;192.168.2.130&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;文件系统核心模块：&lt;/strong&gt;&lt;br /&gt;
+NameNode：集群当中的主节点，主要用于管理集群当中的各种数据&lt;br /&gt;
+ secondaryNameNode：主要能用于 hadoop 当中元数据信息的辅助管理&lt;br /&gt;
+ DataNode：集群当中的从节点，主要用于存储集群当中的各种数据&lt;br /&gt;
+&lt;strong&gt;数据计算核心模块：&lt;/strong&gt;&lt;br /&gt;
+ResourceManager：接收用户的计算请求任务，并负责集群的资源分配&lt;br /&gt;
+ NodeManager：负责执行主节点 APPmaster 分配的任务&lt;/p&gt;
+&lt;h2 id=&#34;2-环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-环境配置&#34;&gt;#&lt;/a&gt; 2、环境配置&lt;/h2&gt;
+&lt;p&gt;1、关闭防火墙&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[root@localhost ~]# systemctl stop firewalld.service 
+#关闭防火墙
+[root@localhost ~]# systemctl disable firewalld.service 
+#禁止开机启动
+[root@localhost ~]*# firewall-cmd --state 
+#查看防火墙状态
+not running
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、设置主机名称&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#在192.168.2.128机器上执行* 
+[root@localhost ~]*# hostnamectl set-hostname  master
+
+*#在192.168.2.129机器上执行* 
+[root@localhost ~]*# hostnamectl set-hostname node01
+
+*#在192.168.2.130机器上执行* 
+[root@localhost ~]*# hostnamectl set-hostname node02
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、三台虚拟机重启&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#在192.168.2.128机器上执行* 
+[root@localhost ~]# reboot
+
+*#在192.168.2.129机器上执行* 
+[root@localhost ~]# reboot
+
+*#在192.168.2.130机器上执行* 
+[root@localhost ~]# reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4、关闭 selinux&lt;/p&gt;
+&lt;p&gt;进入到 /etc/selinux/config 文件，将 SELINUX=enforcing 改为 SELINUX=disabled。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[root@master ~]#  vi  /etc/selinux/config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5、设置免密登录&lt;/p&gt;
+&lt;p&gt;1、首先在 master 主机上使用 ssh-keygen 命令来生成秘钥，一路按回车键&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[root@master~]#ssh-keygen -t rsa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、通过 ssh-copy-id 命令设置免密钥登录&lt;br /&gt;
+其中，master、node01、node02 表示需要设置免密登录的服务器地址。&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;copy-id&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;i ~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub root@192&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;168&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;128&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;copy-id&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;i ~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub root@192&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;168&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;129&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;copy-id&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;i ~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub root@192&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;168&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;130&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;3-安装jdk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-安装jdk&#34;&gt;#&lt;/a&gt; 3、安装 JDK&lt;/h2&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://methiony.work/2020/11/19/Hbase/</guid>
             <title>Hbase</title>

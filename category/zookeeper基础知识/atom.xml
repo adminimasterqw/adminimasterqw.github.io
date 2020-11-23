@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://methiony.work</id>
+    <title>Andrésen • Posts by &#34;zookeeper基础知识&#34; category</title>
+    <link href="https://methiony.work" />
+    <updated>2020-11-23T06:50:40.000Z</updated>
+    <entry>
+        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+        <title>Zookeeper基础知识</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+        <content type="html">&lt;h1 id=&#34;zookeeper基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper基础知识&#34;&gt;#&lt;/a&gt; Zookeeper 基础知识&lt;/h1&gt;
+&lt;h2 id=&#34;1-zookeepr的数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-zookeepr的数据类型&#34;&gt;#&lt;/a&gt; 1、zookeepr 的数据类型&lt;/h2&gt;
+&lt;h3 id=&#34;与标准文件系统相同之处&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#与标准文件系统相同之处&#34;&gt;#&lt;/a&gt; 与标准文件系统相同之处&lt;/h3&gt;
+&lt;p&gt;Zookeeper 的数据类型，在结构上拥有一个层次的命名空间，和标准文件系统非常相似，都是采用树形层次结构&lt;/p&gt;
+&lt;p&gt;Zookeeper 树中的每个节点称为一个 Znode, 每个节点可以拥有子节点&lt;/p&gt;
+&lt;h3 id=&#34;与标准文件系统不同之处&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#与标准文件系统不同之处&#34;&gt;#&lt;/a&gt; 与标准文件系统不同之处&lt;/h3&gt;
+&lt;p&gt;Znode 具有文件和目录两种特点。既有文件的数据功能，又有目录作为路径标识的功能，并可以具有子 Znode。znode 具有增、删、改、查等操作&lt;/p&gt;
+&lt;p&gt;Znode 存储数据大小有限制。它用来管理调度数据，数据通常以 kb 为单位，数据大小至多 1M，通常小于此值&lt;/p&gt;
+&lt;p&gt;Znode 通过路径引用，且为绝对路径，因此为 &amp;quot;/&amp;quot; 开头&lt;/p&gt;
+&lt;p&gt;Znode 由 3 部分组成。stat: 状态信息，描述版本、权限等信息	data：与该 znode 关联的数据	children：该 znode 下的子节点&lt;/p&gt;
+&lt;h2 id=&#34;znode节点类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#znode节点类型&#34;&gt;#&lt;/a&gt; Znode 节点类型&lt;/h2&gt;
+&lt;p&gt;节点类型在创建时被确定，不能改变&lt;/p&gt;
+&lt;p&gt;1、临时节点：在使用期间存在，会话结束后自动删除。不允许拥有子节点&lt;/p&gt;
+&lt;p&gt;2、永久节点：只能手动删除，允许拥有子节点&lt;/p&gt;
+&lt;p&gt;3、节点具有序列化特性，如果在创建时指定，该 znode 后面会自动追加一个 10 位数字的序列号&lt;/p&gt;
+&lt;p&gt;四种类型的 Znode 节点&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;PERSISTENT:&lt;/th&gt;
+&lt;th&gt;永久节点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EPHEMERAL:&lt;/td&gt;
+&lt;td&gt;临时节点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PERSISTENT_SEQUENTIAL&lt;/td&gt;
+&lt;td&gt;永久节点、序列化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EPHEMERAL_SEQUENTIAL&lt;/td&gt;
+&lt;td&gt;临时节点、序列化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;zookeeper的shell客户端操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的shell客户端操作&#34;&gt;#&lt;/a&gt; Zookeeper 的 Shell 客户端操作&lt;/h2&gt;
+&lt;h3 id=&#34;登录zookeeper客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#登录zookeeper客户端&#34;&gt;#&lt;/a&gt; 登录 Zookeeper 客户端&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;bin&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkCli&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;server master:2181&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;操作实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作实例&#34;&gt;#&lt;/a&gt; 操作实例&lt;/h3&gt;
+&lt;p&gt;列出 Path 下的所有 Znode&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建永久节点&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello1 world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建临时节点&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;e &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建永久序列化节点&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;s &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;s &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello1 world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;创建临时序列化节点&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;e &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;s &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello world&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改节点数据&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello zookeeper&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;删除节点，如果有子 znode 则该命令无效&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;delete &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;删除节点，如果有子 znode 则递归删除&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;rmr &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;hello&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;列出历史记录&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;histroy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;操作命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作命令&#34;&gt;#&lt;/a&gt; 操作命令&lt;/h3&gt;
+&lt;p&gt;path: 指 / Znode、data:znode 数据、acl: 权限、watch: 观察&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;create [-s] [-e] path data acl&lt;/td&gt;
+&lt;td&gt;创建 znode&lt;/td&gt;
+&lt;td&gt;-s 指顺序节点，-e 指临时节点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ls  path  [watch]&lt;/td&gt;
+&lt;td&gt;列出 path 下所有子 znode&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;get  path  [watch]&lt;/td&gt;
+&lt;td&gt;获取 path 对应的 znode 的数据和属性&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ls2  path  [watch]&lt;/td&gt;
+&lt;td&gt;查看 path 所有子 znode 和子 znode 属性&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set  path  data&lt;/td&gt;
+&lt;td&gt;更新节点&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delete  path&lt;/td&gt;
+&lt;td&gt;删除节点，如果有子 znode 则该命令无效&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rmr  path&lt;/td&gt;
+&lt;td&gt;删除节点，如果有子 znode 则递归删除&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setquota  -n|-b  val  path&lt;/td&gt;
+&lt;td&gt;修改 znode 配额&lt;/td&gt;
+&lt;td&gt;-n 设置子节点最大个数，-b 设置节点数据最大长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;节点属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点属性&#34;&gt;#&lt;/a&gt; 节点属性&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CMethiony%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201123160350874.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;cZxid:znode 创建的事务 id&lt;/p&gt;
+&lt;p&gt;ctime: 节点创建时的时间戳&lt;/p&gt;
+&lt;p&gt;mZxid:Znode 被修改的事务 id, 每次对 znode 的修改都会更新 mZxid, 可以确定更新操作的顺序，如果 zxid1 小于 zxid2，说明 zxid1 操作先于 zxid2 发生，zxid 对于整个 zookeeper 都是唯一的&lt;/p&gt;
+&lt;p&gt;mtime: 节点最新一次更新发生时的时间戳&lt;/p&gt;
+&lt;p&gt;cversion: 子节点的版本号。当 znode 子节点有变化时，值会增加 1&lt;/p&gt;
+&lt;p&gt;dataVersion: 数据版本号，每次对节点进行 set 操作，值会增加 1，避免了数据更新的顺序问题&lt;/p&gt;
+&lt;p&gt;aclVersion:ACL 的版本号&lt;/p&gt;
+&lt;p&gt;ephemeralOwner: 如果节点为临时节点，ephemeralOwner 值表示与该节点绑定的 session id。如果不是，ephemeralOwner 值为 0&lt;/p&gt;
+&lt;h2 id=&#34;zookeeper的watch机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的watch机制&#34;&gt;#&lt;/a&gt; Zookeeper 的 watch 机制&lt;/h2&gt;
+</content>
+        <updated>2020-11-23T06:50:40.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
+        <title>Zookeeper快速搭建</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
+        <content type="html">&lt;h1 id=&#34;zookeeper快速搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper快速搭建&#34;&gt;#&lt;/a&gt; ZooKeeper 快速搭建&lt;/h1&gt;
+&lt;h2 id=&#34;1-zookeeper的安装部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-zookeeper的安装部署&#34;&gt;#&lt;/a&gt; 1、Zookeeper 的安装部署&lt;/h2&gt;
+&lt;h3 id=&#34;拷贝zookeeper安装包到linux系统下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拷贝zookeeper安装包到linux系统下&#34;&gt;#&lt;/a&gt; 拷贝 Zookeeper 安装包到 Linux 系统下&lt;/h3&gt;
+&lt;h3 id=&#34;解压到指定目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解压到指定目录&#34;&gt;#&lt;/a&gt; 解压到指定目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master]&lt;/span&gt;$ tar &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;zxvf zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tar&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gz &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;C &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;opt&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bigdata&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;配置修改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置修改&#34;&gt;#&lt;/a&gt; 配置修改&lt;/h3&gt;
+&lt;h4 id=&#34;optbigdatazookeeper-362conf这个路径下的zoo_samplecfg修改为zoocfg如果存在zoocfg文件则不需要拷贝zoo_samplecfg&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#optbigdatazookeeper-362conf这个路径下的zoo_samplecfg修改为zoocfg如果存在zoocfg文件则不需要拷贝zoo_samplecfg&#34;&gt;#&lt;/a&gt; /opt/bigdata/zookeeper-3.6.2/conf 这个路径下的 zoo_sample.cfg 修改为 zoo.cfg (如果存在 zoo.cfg 文件则不需要拷贝 zoo_sample.cfg)&lt;/h4&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master]&lt;/span&gt;$ &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; zoo_sample&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg zoo&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;打开 zoo.cfg 文件，修改 dataDir 路径&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;dataDir=&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;opt&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bigdata&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkData&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;文件内容末尾添加内容&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;1=master:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2=node1:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;3=node2:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 /opt/bigdata/zookeeper-3.6.2 / 这个目录上创建 zkData 文件夹&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;$ mkdir zkData&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;2-zookeeper启动与操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-zookeeper启动与操作&#34;&gt;#&lt;/a&gt; 2、 Zookeeper 启动与操作&lt;/h2&gt;
+&lt;h3 id=&#34;启动zookeeper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动zookeeper&#34;&gt;#&lt;/a&gt; 启动 Zookeeper&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$bin&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkServer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ZooKeeper JMX enabled by default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Using&lt;/span&gt; config: &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;opt&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bigdata&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bin&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;conf&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zoo&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Starting zookeeper &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; STARTED     &lt;span class=&#34;token comment&#34;&gt;# 这时，一般就启动成功了&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;查看进程是否启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看进程是否启动&#34;&gt;#&lt;/a&gt; 查看进程是否启动&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$jps&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;查看状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看状态&#34;&gt;#&lt;/a&gt; 查看状态&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$bin&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkServer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh status&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;启动客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动客户端&#34;&gt;#&lt;/a&gt; 启动客户端&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$bin&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkCli&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;退出客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出客户端&#34;&gt;#&lt;/a&gt; 退出客户端&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[zk: localhost:2181(CONNECTED) 0]&lt;/span&gt; quit&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;停用zookeeper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#停用zookeeper&#34;&gt;#&lt;/a&gt; 停用 Zookeeper&lt;/h3&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$bin&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkServer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh stop&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <updated>2020-11-21T09:40:19.000Z</updated>
+    </entry>
+</feed>

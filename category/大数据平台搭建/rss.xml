@@ -8,11 +8,37 @@
         <pubDate>Tue, 24 Nov 2020 11:28:23 +0800</pubDate>
         <lastBuildDate>Tue, 24 Nov 2020 11:28:23 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/11/24/Platform-construction/Haoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
-            <title>Hadoop基本介绍</title>
-            <link>https://methiony.work/2020/11/24/Platform-construction/Haoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</link>
+            <guid isPermalink="true">https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</guid>
+            <title>Hadoop基本介绍及相关知识</title>
+            <link>https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</link>
             <pubDate>Tue, 24 Nov 2020 11:28:23 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
+            <description><![CDATA[ &lt;h1 id=&#34;hadoop的介绍及相关知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hadoop的介绍及相关知识&#34;&gt;#&lt;/a&gt; Hadoop 的介绍及相关知识&lt;/h1&gt;
+&lt;p&gt;狭义上，Hadoop 就是单独指代 Hadoop 这个软件&lt;/p&gt;
+&lt;p&gt;HDFS：分布式文件系统&lt;/p&gt;
+&lt;p&gt;MapReduce：分布式计算系统&lt;/p&gt;
+&lt;p&gt;Yarn：分布式样集群资源管理&lt;/p&gt;
+&lt;p&gt;广义上，Hadoop 指代大数据的一个生态圈，包括其他&lt;/p&gt;
+&lt;h2 id=&#34;1-hadoop核心-hdfs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-hadoop核心-hdfs&#34;&gt;#&lt;/a&gt; 1、Hadoop 核心 - HDFS&lt;/h2&gt;
+&lt;p&gt;1、介绍：大量数据跨机器存储，统一管理分布在集群上的文件系统，也就是分布式文件系统&lt;/p&gt;
+&lt;p&gt;2、架构&lt;/p&gt;
+&lt;p&gt;HDFS 是一个主 / 从（Mater/Slave）体系结构&lt;/p&gt;
+&lt;p&gt;HDFS 由四部分组成，HDFS Client、NameNode、DataNode 和 Secondary NameNode&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</guid>
+            <title>Hadoop基本介绍及相关知识</title>
+            <link>https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</link>
+            <pubDate>Tue, 24 Nov 2020 11:28:23 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;hadoop的介绍及相关知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hadoop的介绍及相关知识&#34;&gt;#&lt;/a&gt; Hadoop 的介绍及相关知识&lt;/h1&gt;
+&lt;p&gt;狭义上，Hadoop 就是单独指代 Hadoop 这个软件&lt;/p&gt;
+&lt;p&gt;HDFS：分布式文件系统&lt;/p&gt;
+&lt;p&gt;MapReduce：分布式计算系统&lt;/p&gt;
+&lt;p&gt;Yarn：分布式样集群资源管理&lt;/p&gt;
+&lt;p&gt;广义上，Hadoop 指代大数据的一个生态圈，包括其他&lt;/p&gt;
+&lt;h2 id=&#34;1-hadoop核心-hdfs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-hadoop核心-hdfs&#34;&gt;#&lt;/a&gt; 1、Hadoop 核心 - HDFS&lt;/h2&gt;
+&lt;p&gt;1、介绍：大量数据跨机器存储，统一管理分布在集群上的文件系统，也就是分布式文件系统&lt;/p&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</guid>
@@ -184,9 +210,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/11/21/Platform-construction/Haoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/11/21/Platform-construction/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</guid>
             <title>Hadoop分布式集群搭建</title>
-            <link>https://methiony.work/2020/11/21/Platform-construction/Haoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</link>
+            <link>https://methiony.work/2020/11/21/Platform-construction/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</link>
             <pubDate>Sat, 21 Nov 2020 19:19:50 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hadoop分布式集群搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hadoop分布式集群搭建&#34;&gt;#&lt;/a&gt; Hadoop 分布式集群搭建&lt;/h1&gt;
 &lt;h2 id=&#34;1-环境准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-环境准备&#34;&gt;#&lt;/a&gt; 1、环境准备&lt;/h2&gt;

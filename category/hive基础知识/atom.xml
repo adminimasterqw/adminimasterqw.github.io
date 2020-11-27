@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://methiony.work</id>
+    <title>Andrésen • Posts by &#34;hive基础知识&#34; category</title>
+    <link href="https://methiony.work" />
+    <updated>2020-11-27T14:30:30.000Z</updated>
+    <entry>
+        <id>https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
+        <title>Hive基本概述</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
+        <content type="html"></content>
+        <updated>2020-11-27T14:30:30.000Z</updated>
+    </entry>
+</feed>

@@ -3,7 +3,93 @@
     <id>https://methiony.work</id>
     <title>Andrésen • Posts by &#34;大数据平台搭建&#34; category</title>
     <link href="https://methiony.work" />
-    <updated>2020-11-26T07:42:16.000Z</updated>
+    <updated>2020-11-27T14:30:30.000Z</updated>
+    <entry>
+        <id>https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
+        <title>Hive基本概述</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
+        <content type="html"></content>
+        <updated>2020-11-27T14:30:30.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
+        <title>Yarn的基本概述</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
+        <content type="html">&lt;h1 id=&#34;1-yarn的介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-yarn的介绍&#34;&gt;#&lt;/a&gt; 1、yarn 的介绍&lt;/h1&gt;
+&lt;p&gt;yarn 是 hadoop 集群当中的资源管理系统模块，从 hadoop2.0 始引入 yarn 模块 yarn 可为各类计算框架提供资源的管理和调度，主要用于管理集群当中的资源 (主要是服务器的各种硬件资源，包括 CPU, 内存，磁盘，网络 1o 等) 以及调度运行在 yarn 上面的各种任务&lt;/p&gt;
+&lt;p&gt;yarn 核心出发点是为了分离资源管理与作业监控，实现分离的做法是拥有一个全局的资源管理 (ResourceManager,RM), 以及每个应用程序对应一个的应用管理器 (Application Master, AM)&lt;/p&gt;
+&lt;p&gt;yam 主要就是为了调度资源，管理任务等&lt;br /&gt;
+其调度分为两个层级来说:&lt;br /&gt;
+ 一级调度管理&lt;br /&gt;
+计算资源管理 (CPU, 内存，网络 IO, 磁盘)&lt;br /&gt;
+ 二级调度管理&lt;br /&gt;
+任务内部的计算模型管理 (AppMaster 的任务精细化管理)&lt;/p&gt;
+&lt;h1 id=&#34;2-yarn的主要组件介绍与作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-yarn的主要组件介绍与作用&#34;&gt;#&lt;/a&gt; 2、Yarn 的主要组件介绍与作用&lt;/h1&gt;
+&lt;p&gt;YARN 总体上是 Master/ Slave 结构，主要由 ResourceManager、NodeManager、Application Master 和 Container 等几个组件构成&lt;/p&gt;
+&lt;h2 id=&#34;1-resource-managerrm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-resource-managerrm&#34;&gt;#&lt;/a&gt; 1、Resource Manager(RM)&lt;/h2&gt;
+&lt;p&gt;负责处理客户端请求对各 NM 上的资源进行统一管理和调度。给 Application Master 分配空闲的 Container 运行并监控其运行状态。主要由两个组件构成：调度器和应用程序管理器&lt;/p&gt;
+&lt;h3 id=&#34;调度器scheduler&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#调度器scheduler&#34;&gt;#&lt;/a&gt; 调度器（scheduler）&lt;/h3&gt;
+&lt;p&gt;调度器根据容量、队列等限制条件，将系统中的资源分配给各个正在运行的应用程序。调度器仅根据各个应用程序的资源需求进行资源分配，而资源分配单位是 Container。 Scheduler. 不负责监控或者跟踪应用程序的状态。总之，调度器根据应用程序的资源要求，以及集群机器的资源情况，为应用程序分配封装在 Container 中的资源&lt;/p&gt;
+&lt;h3 id=&#34;应用程序管理器-applications-manager&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用程序管理器-applications-manager&#34;&gt;#&lt;/a&gt; 应用程序管理器 (Applications Manager)&lt;/h3&gt;
+&lt;p&gt;应用程序管理器负责管理整个系统中所有应用程序，包括应用程序提交、与调度器协商资源以启动 Application Master、监控 Application Master, 运行状态并在失败时重新启动等，跟踪分给的 Container 的进度、状态也是其职责。&lt;/p&gt;
+&lt;h2 id=&#34;2-nodemanagernm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-nodemanagernm&#34;&gt;#&lt;/a&gt; 2、NodeManager(NM)&lt;/h2&gt;
+&lt;p&gt;NodeManager 是每个节点上的资源和任务管理器。它会定时地向 ResourceManager 汇报本节点上的资源使用情况和各个 Container 的运行状态；同时会接收并处理来自 ApplicationMaster 的 Container 启动停止等请求。&lt;/p&gt;
+&lt;h2 id=&#34;3-applicationmasteram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-applicationmasteram&#34;&gt;#&lt;/a&gt; 3、ApplicationMaster(AM)&lt;/h2&gt;
+&lt;p&gt;用户提交的应用程序均包含一个 Application Master, 负责应用的监控，跟踪应用执行状态，重启失败任务等。 Application Master 是应用框架，它负责向 ResourceManager 协调资源，并且与 Node Manager 协同工作完成 Task 的执行和监控&lt;/p&gt;
+&lt;h2 id=&#34;4-container&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-container&#34;&gt;#&lt;/a&gt; 4、Container&lt;/h2&gt;
+&lt;p&gt;Container 是 YARN 中的资源抽象，它封装了某个节点上的多维度资源，如内存、CPU、磁盘、网络等，当 ApplicationMaster 向 ResourceManager 申请资源时，ResourceManager 为 ApplicationMaster 返回的资源便是用 Container 表示的。&lt;/p&gt;
+</content>
+        <updated>2020-11-27T13:56:16.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+        <title>MapReduce基本概念</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;1-mapreduce介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-mapreduce介绍&#34;&gt;#&lt;/a&gt; 1、MapReduce 介绍&lt;/h1&gt;
+&lt;p&gt;MapReduce 思想在生活中处处可见。或多或少都曾接触过这种思想。 MapReduce 的思想核心&lt;br /&gt;
+是 &amp;quot; 分而治之”, 适用于大量复杂的任务处理场景 (大规模数据处理场景)&lt;/p&gt;
+&lt;p&gt;1、Map 负责 “分”, 即把复杂的任务分解为若干个 “简单的任务” 来并行处理。可以进行拆分的&lt;br /&gt;
+前提是这些小任务可以并行计算，彼此间几乎没有依赖关系&lt;br /&gt;
+ 2、Reduce 负责 “合”, 即对 map 阶段的结果进行全局汇总&lt;br /&gt;
+ 3、MapReduce 运行在 yarn 集群&lt;/p&gt;
+&lt;p&gt;ResourceManage&lt;/p&gt;
+&lt;p&gt;NodeManager&lt;br /&gt;
+ 这两个阶段合起来正是 MapReduce 思想的体现&lt;/p&gt;
+&lt;p&gt;4、还有一个比较形象的语言解释 MapReduce&lt;br /&gt;
+ 我们要数图书馆中的所有书。你数 1 号书架，我数 2 号卡架。这就是 Map&amp;quot;。我们人越多，数书&lt;br /&gt;
+就更快。&lt;br /&gt;
+现在我们到一起，把所有人的统计数加在一起。这就是 “Reduce”。&lt;/p&gt;
+&lt;h1 id=&#34;2-mapreduce设计构思&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-mapreduce设计构思&#34;&gt;#&lt;/a&gt; 2、MapReduce 设计构思&lt;/h1&gt;
+&lt;h2 id=&#34;1-编程框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-编程框架&#34;&gt;#&lt;/a&gt; 1、编程框架&lt;/h2&gt;
+&lt;p&gt;MapReduce 是一个分布式运算程序的编程框架，核心功能是将用户编写的业务逻辑代码和自带默认组件整合成一个完整的分布式运算程序，并发运行在 Hadoop 集群上。&lt;br /&gt;
+MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统层面的处理细节，提供一个抽象和高层的编程接口和框架。&lt;/p&gt;
+&lt;h2 id=&#34;2-处理方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-处理方式&#34;&gt;#&lt;/a&gt; 2、处理方式&lt;/h2&gt;
+&lt;p&gt;程序员仅需要关心其应用层的具体计算问题，仅需编写少量的处理应用本身计算问题的程序代码。如何具体完成这个并行计算任务所相关的诸多系统层细节被隐藏起来交给计算框架去处理&lt;/p&gt;
+&lt;h2 id=&#34;3-编程接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-编程接口&#34;&gt;#&lt;/a&gt; 3、编程接口&lt;/h2&gt;
+&lt;p&gt;Map 和 Reduce 为程序员提供了一个清晰的操作接口抽象描述。 MapReduce 中定义了如下的 Map 和 Reduce 两个抽象的编程接口，由用户去编程实现 Map 和 Reduce&lt;/p&gt;
+&lt;h2 id=&#34;4-数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-数据类型&#34;&gt;#&lt;/a&gt; 4、 数据类型&lt;/h2&gt;
+&lt;p&gt;MapReduce 处理的数据类型是 &amp;lt;key,value&amp;gt; 键值对&lt;br /&gt;
+・Map: (k1; v1)→[ ( k2; V2) ]&lt;br /&gt;
+·Reduce: ( k2; [v2] )-[ (k3;  v3) ]&lt;/p&gt;
+&lt;p&gt;一个完整的 mapreduce 程序在分布式运行时有三类实例进程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MRAppMaster 负责整个程序的过程调度及状态协调&lt;/li&gt;
+&lt;li&gt;MapTask 负责 map 阶段的整个数据处理流程&lt;/li&gt;
+&lt;li&gt;ReduceTask 负责 reduce 阶段的整个数据处理流程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;3-mapreduce分区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-mapreduce分区&#34;&gt;#&lt;/a&gt; 3、MapReduce 分区&lt;/h1&gt;
+&lt;h2 id=&#34;1-分区概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-分区概述&#34;&gt;#&lt;/a&gt; 1、分区概述&lt;/h2&gt;
+&lt;p&gt;在 MapReduce 中，通过我们指定分区，会将同一个分区的数据发送到同一个 Reduce 当中进行处理&lt;br /&gt;
+例如：为了数据的统计，可以把一批类似的数据发送到同一个 Reduce 当中，在同一个 Reduce 当中统计相同类型的数据，就可以实现类似的数据分区和统计等&lt;br /&gt;
+其实就是相同类型的数据，有共性的数据，送到一起去处理 Reduce 当中默认的分区只有一个&lt;/p&gt;
+</content>
+        <updated>2020-11-27T09:56:36.000Z</updated>
+    </entry>
     <entry>
         <id>https://methiony.work/2020/11/26/Platform-construction/Hadoop/course-2/Hadoop%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
         <title>Hadoop高可用集群搭建</title>
@@ -181,6 +267,18 @@
 &lt;p&gt;2、重新启动 node01 的 namenode 进程，sh &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3N0YXJ0LWRmcy5zaA==&#34;&gt;start-dfs.sh&lt;/span&gt;, 浏览器访问 node01，此时 node01 的状态为 standby&lt;/p&gt;
 </content>
         <updated>2020-11-26T07:42:16.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
+        <title>HDFS的API操作</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
+        <content type="html">&lt;p&gt;::📓&lt;br /&gt;
+以下为个人学习笔记&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+</content>
+        <updated>2020-11-25T13:00:10.000Z</updated>
     </entry>
     <entry>
         <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</id>

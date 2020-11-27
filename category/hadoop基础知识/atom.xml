@@ -183,6 +183,18 @@
         <updated>2020-11-26T07:42:16.000Z</updated>
     </entry>
     <entry>
+        <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
+        <title>HDFS的API操作</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
+        <content type="html">&lt;p&gt;::📓&lt;br /&gt;
+以下为个人学习笔记&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+</content>
+        <updated>2020-11-25T13:00:10.000Z</updated>
+    </entry>
+    <entry>
         <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</id>
         <title>HDFS的文件及元数据管理</title>
         <link rel="alternate" href="https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/"/>

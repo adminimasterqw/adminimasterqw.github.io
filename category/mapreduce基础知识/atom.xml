@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://methiony.work</id>
+    <title>Andrésen • Posts by &#34;mapreduce基础知识&#34; category</title>
+    <link href="https://methiony.work" />
+    <updated>2020-11-27T09:56:36.000Z</updated>
+    <entry>
+        <id>https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+        <title>MapReduce基本概念</title>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;1-mapreduce介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-mapreduce介绍&#34;&gt;#&lt;/a&gt; 1、MapReduce 介绍&lt;/h1&gt;
+&lt;p&gt;MapReduce 思想在生活中处处可见。或多或少都曾接触过这种思想。 MapReduce 的思想核心&lt;br /&gt;
+是 &amp;quot; 分而治之”, 适用于大量复杂的任务处理场景 (大规模数据处理场景)&lt;/p&gt;
+&lt;p&gt;1、Map 负责 “分”, 即把复杂的任务分解为若干个 “简单的任务” 来并行处理。可以进行拆分的&lt;br /&gt;
+前提是这些小任务可以并行计算，彼此间几乎没有依赖关系&lt;br /&gt;
+ 2、Reduce 负责 “合”, 即对 map 阶段的结果进行全局汇总&lt;br /&gt;
+ 3、MapReduce 运行在 yarn 集群&lt;/p&gt;
+&lt;p&gt;ResourceManage&lt;/p&gt;
+&lt;p&gt;NodeManager&lt;br /&gt;
+ 这两个阶段合起来正是 MapReduce 思想的体现&lt;/p&gt;
+&lt;p&gt;4、还有一个比较形象的语言解释 MapReduce&lt;br /&gt;
+ 我们要数图书馆中的所有书。你数 1 号书架，我数 2 号卡架。这就是 Map&amp;quot;。我们人越多，数书&lt;br /&gt;
+就更快。&lt;br /&gt;
+现在我们到一起，把所有人的统计数加在一起。这就是 “Reduce”。&lt;/p&gt;
+&lt;h1 id=&#34;2-mapreduce设计构思&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-mapreduce设计构思&#34;&gt;#&lt;/a&gt; 2、MapReduce 设计构思&lt;/h1&gt;
+&lt;h2 id=&#34;1-编程框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-编程框架&#34;&gt;#&lt;/a&gt; 1、编程框架&lt;/h2&gt;
+&lt;p&gt;MapReduce 是一个分布式运算程序的编程框架，核心功能是将用户编写的业务逻辑代码和自带默认组件整合成一个完整的分布式运算程序，并发运行在 Hadoop 集群上。&lt;br /&gt;
+MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统层面的处理细节，提供一个抽象和高层的编程接口和框架。&lt;/p&gt;
+&lt;h2 id=&#34;2-处理方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-处理方式&#34;&gt;#&lt;/a&gt; 2、处理方式&lt;/h2&gt;
+&lt;p&gt;程序员仅需要关心其应用层的具体计算问题，仅需编写少量的处理应用本身计算问题的程序代码。如何具体完成这个并行计算任务所相关的诸多系统层细节被隐藏起来交给计算框架去处理&lt;/p&gt;
+&lt;h2 id=&#34;3-编程接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-编程接口&#34;&gt;#&lt;/a&gt; 3、编程接口&lt;/h2&gt;
+&lt;p&gt;Map 和 Reduce 为程序员提供了一个清晰的操作接口抽象描述。 MapReduce 中定义了如下的 Map 和 Reduce 两个抽象的编程接口，由用户去编程实现 Map 和 Reduce&lt;/p&gt;
+&lt;h2 id=&#34;4-数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-数据类型&#34;&gt;#&lt;/a&gt; 4、 数据类型&lt;/h2&gt;
+&lt;p&gt;MapReduce 处理的数据类型是 &amp;lt;key,value&amp;gt; 键值对&lt;br /&gt;
+・Map: (k1; v1)→[ ( k2; V2) ]&lt;br /&gt;
+·Reduce: ( k2; [v2] )-[ (k3;  v3) ]&lt;/p&gt;
+&lt;p&gt;一个完整的 mapreduce 程序在分布式运行时有三类实例进程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MRAppMaster 负责整个程序的过程调度及状态协调&lt;/li&gt;
+&lt;li&gt;MapTask 负责 map 阶段的整个数据处理流程&lt;/li&gt;
+&lt;li&gt;ReduceTask 负责 reduce 阶段的整个数据处理流程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;3-mapreduce分区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-mapreduce分区&#34;&gt;#&lt;/a&gt; 3、MapReduce 分区&lt;/h1&gt;
+&lt;h2 id=&#34;1-分区概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-分区概述&#34;&gt;#&lt;/a&gt; 1、分区概述&lt;/h2&gt;
+&lt;p&gt;在 MapReduce 中，通过我们指定分区，会将同一个分区的数据发送到同一个 Reduce 当中进行处理&lt;br /&gt;
+例如：为了数据的统计，可以把一批类似的数据发送到同一个 Reduce 当中，在同一个 Reduce 当中统计相同类型的数据，就可以实现类似的数据分区和统计等&lt;br /&gt;
+其实就是相同类型的数据，有共性的数据，送到一起去处理 Reduce 当中默认的分区只有一个&lt;/p&gt;
+</content>
+        <updated>2020-11-27T09:56:36.000Z</updated>
+    </entry>
+</feed>

@@ -8,7 +8,12 @@
         <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
         <title>Zookeeper的API操作</title>
         <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
-        <content type="html">&lt;h1 id=&#34;zookeeper的javaapi操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的javaapi操作&#34;&gt;#&lt;/a&gt; Zookeeper 的 javaAPI 操作&lt;/h1&gt;
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;zookeeper的javaapi操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的javaapi操作&#34;&gt;#&lt;/a&gt; Zookeeper 的 javaAPI 操作&lt;/h1&gt;
 &lt;p&gt;这里操作 Zookeeper 的 JavaAPI 使用的是 Zookeeper 客户端框架 Curator&lt;/p&gt;
 &lt;p&gt;Curator 包含：&lt;/p&gt;
 &lt;p&gt;curator-framework：对 zookeeper 的底层 api 的一些封装&lt;/p&gt;
@@ -30,7 +35,12 @@
         <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/</id>
         <title>Zookeeper的watch和选举机制</title>
         <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/"/>
-        <content type="html">&lt;h1 id=&#34;zookeeper的watch和选举机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的watch和选举机制&#34;&gt;#&lt;/a&gt; Zookeeper 的 watch 和选举机制&lt;/h1&gt;
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;zookeeper的watch和选举机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper的watch和选举机制&#34;&gt;#&lt;/a&gt; Zookeeper 的 watch 和选举机制&lt;/h1&gt;
 &lt;h2 id=&#34;1-选举机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-选举机制&#34;&gt;#&lt;/a&gt; 1、选举机制&lt;/h2&gt;
 &lt;p&gt;半数机制：集群中半数以上机器存活，集群可用。所以 zookeeper 适合安装奇数台服务器。Zookeeper 工作时，是有一个节点为 Leader，其他则为 Follower，Leader 是通过内部的选举机制临时产生的。&lt;/p&gt;
 &lt;p&gt;假设有五台服务器组成的 Zookeeper 集群，它们的 id 为 1-5，没有历史数据，在存放数据量这一点上，都是一样的。假设这些服务器依序启动，它们之间会通过选举机制选出 Leader&lt;/p&gt;
@@ -56,7 +66,12 @@
         <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
         <title>Zookeeper基础知识</title>
         <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-        <content type="html">&lt;h1 id=&#34;zookeeper基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper基础知识&#34;&gt;#&lt;/a&gt; Zookeeper 基础知识&lt;/h1&gt;
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;zookeeper基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper基础知识&#34;&gt;#&lt;/a&gt; Zookeeper 基础知识&lt;/h1&gt;
 &lt;h2 id=&#34;1-zookeepr的数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-zookeepr的数据类型&#34;&gt;#&lt;/a&gt; 1、zookeepr 的数据类型&lt;/h2&gt;
 &lt;h3 id=&#34;与标准文件系统相同之处&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#与标准文件系统相同之处&#34;&gt;#&lt;/a&gt; 与标准文件系统相同之处&lt;/h3&gt;
 &lt;p&gt;Zookeeper 的数据类型，在结构上拥有一个层次的命名空间，和标准文件系统非常相似，都是采用树形层次结构&lt;/p&gt;
@@ -160,7 +175,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;节点属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点属性&#34;&gt;#&lt;/a&gt; 节点属性&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CMethiony%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201123160350874.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E8%8A%82%E7%82%B9%E5%B1%9E%E6%80%A7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;cZxid:znode 创建的事务 id&lt;/p&gt;
 &lt;p&gt;ctime: 节点创建时的时间戳&lt;/p&gt;
 &lt;p&gt;mZxid:Znode 被修改的事务 id, 每次对 znode 的修改都会更新 mZxid, 可以确定更新操作的顺序，如果 zxid1 小于 zxid2，说明 zxid1 操作先于 zxid2 发生，zxid 对于整个 zookeeper 都是唯一的&lt;/p&gt;
@@ -177,7 +192,12 @@
         <id>https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
         <title>Zookeeper快速搭建</title>
         <link rel="alternate" href="https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
-        <content type="html">&lt;h1 id=&#34;zookeeper快速搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper快速搭建&#34;&gt;#&lt;/a&gt; ZooKeeper 快速搭建&lt;/h1&gt;
+        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;zookeeper快速搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper快速搭建&#34;&gt;#&lt;/a&gt; ZooKeeper 快速搭建&lt;/h1&gt;
 &lt;h2 id=&#34;1-zookeeper的安装部署&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-zookeeper的安装部署&#34;&gt;#&lt;/a&gt; 1、Zookeeper 的安装部署&lt;/h2&gt;
 &lt;h3 id=&#34;拷贝zookeeper安装包到linux系统下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拷贝zookeeper安装包到linux系统下&#34;&gt;#&lt;/a&gt; 拷贝 Zookeeper 安装包到 Linux 系统下&lt;/h3&gt;
 &lt;h3 id=&#34;解压到指定目录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解压到指定目录&#34;&gt;#&lt;/a&gt; 解压到指定目录&lt;/h3&gt;
@@ -186,7 +206,13 @@
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master]&lt;/span&gt;$ &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; zoo_sample&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg zoo&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;打开 zoo.cfg 文件，修改 dataDir 路径&lt;/p&gt;
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;dataDir=&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;opt&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bigdata&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkData&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;文件内容末尾添加内容&lt;/p&gt;
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;1=master:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2=node1:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;server&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;3=node2:2888:3888&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 /opt/bigdata/zookeeper-3.6.2 / 这个目录上创建 zkData 文件夹&lt;/p&gt;
-&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;$ mkdir zkData&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;2-zookeeper启动与操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-zookeeper启动与操作&#34;&gt;#&lt;/a&gt; 2、 Zookeeper 启动与操作&lt;/h2&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;$ mkdir zkData&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 /opt/bigdata/zookeeper-3.6.2/zkData 这个目录上创建 myid 文件&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zkData]&lt;/span&gt;$ touch myid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;编辑 myid 文件 (其他机器上修改对应的 server 的数字)&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zkData]&lt;/span&gt;$ vi myid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;pre&gt;&lt;code&gt;1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;拷贝分发到 node1、node2&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master bigdata]&lt;/span&gt;$ scp &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;r zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2 node1:&lt;span class=&#34;token variable&#34;&gt;$PWD&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master bigdata]&lt;/span&gt;$ scp &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;r zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2 node2:&lt;span class=&#34;token variable&#34;&gt;$PWD&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改 myid 文件&lt;/p&gt;
+&lt;h2 id=&#34;2-zookeeper启动与操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-zookeeper启动与操作&#34;&gt;#&lt;/a&gt; 2、 Zookeeper 启动与操作&lt;/h2&gt;
 &lt;h3 id=&#34;启动zookeeper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动zookeeper&#34;&gt;#&lt;/a&gt; 启动 Zookeeper&lt;/h3&gt;
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$bin&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zkServer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sh &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ZooKeeper JMX enabled by default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Using&lt;/span&gt; config: &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;opt&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bigdata&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zookeeper&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;6&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;2&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;bin&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;conf&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;zoo&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cfg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Starting zookeeper &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; STARTED     &lt;span class=&#34;token comment&#34;&gt;# 这时，一般就启动成功了&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;查看进程是否启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看进程是否启动&#34;&gt;#&lt;/a&gt; 查看进程是否启动&lt;/h3&gt;
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token namespace&#34;&gt;[root@master zookeeper-3.6.2]&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$jps&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;查看状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看状态&#34;&gt;#&lt;/a&gt; 查看状态&lt;/h3&gt;

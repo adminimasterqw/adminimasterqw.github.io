@@ -8,11 +8,11 @@
         <id>https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
         <title>MapReduce基本概念</title>
         <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-        <content type="html">&lt;p&gt;:::note info&lt;br /&gt;
- 以下为个人学习笔记&lt;br /&gt;
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;br /&gt;
-:::&lt;/p&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVrNHkxMTdZcQ==&#34;&gt; https://www.bilibili.com/video/BV1ek4y117Yq&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;1-mapreduce介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-mapreduce介绍&#34;&gt;#&lt;/a&gt; 1、MapReduce 介绍&lt;/h1&gt;
 &lt;p&gt;MapReduce 思想在生活中处处可见。或多或少都曾接触过这种思想。 MapReduce 的思想核心&lt;br /&gt;
 是 &amp;quot; 分而治之”, 适用于大量复杂的任务处理场景 (大规模数据处理场景)&lt;/p&gt;

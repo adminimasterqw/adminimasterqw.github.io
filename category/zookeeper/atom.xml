@@ -78,9 +78,9 @@
 &lt;p&gt;Zookeeper 树中的每个节点称为一个 Znode, 每个节点可以拥有子节点&lt;/p&gt;
 &lt;h3 id=&#34;与标准文件系统不同之处&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#与标准文件系统不同之处&#34;&gt;#&lt;/a&gt; 与标准文件系统不同之处&lt;/h3&gt;
 &lt;p&gt;Znode 具有文件和目录两种特点。既有文件的数据功能，又有目录作为路径标识的功能，并可以具有子 Znode。znode 具有增、删、改、查等操作&lt;/p&gt;
-&lt;p&gt;Znode 存储数据大小有限制。它用来管理调度数据，数据通常以 kb 为单位，数据大小至多 1M，通常小于此值&lt;/p&gt;
-&lt;p&gt;Znode 通过路径引用，且为绝对路径，因此为 &amp;quot;/&amp;quot; 开头&lt;/p&gt;
-&lt;p&gt;Znode 由 3 部分组成。stat: 状态信息，描述版本、权限等信息	data：与该 znode 关联的数据	children：该 znode 下的子节点&lt;/p&gt;
+&lt;p&gt;存储数据大小有限制。它用来管理调度数据，数据通常以 kb 为单位，数据大小至多 1M，通常小于此值&lt;/p&gt;
+&lt;p&gt;通过路径引用，且为绝对路径，因此为 &amp;quot;/&amp;quot; 开头&lt;/p&gt;
+&lt;p&gt;由 3 部分组成。stat: 状态信息，描述版本、权限等信息	data：与该 znode 关联的数据	children：该 znode 下的子节点&lt;/p&gt;
 &lt;h2 id=&#34;znode节点类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#znode节点类型&#34;&gt;#&lt;/a&gt; Znode 节点类型&lt;/h2&gt;
 &lt;p&gt;节点类型在创建时被确定，不能改变&lt;/p&gt;
 &lt;p&gt;1、临时节点：在使用期间存在，会话结束后自动删除。不允许拥有子节点&lt;/p&gt;

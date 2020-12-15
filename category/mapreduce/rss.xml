@@ -40,10 +40,8 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
 &lt;h2 id=&#34;3-编程接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-编程接口&#34;&gt;#&lt;/a&gt; 3、编程接口&lt;/h2&gt;
 &lt;p&gt;Map 和 Reduce 为程序员提供了一个清晰的操作接口抽象描述。 MapReduce 中定义了如下的 Map 和 Reduce 两个抽象的编程接口，由用户去编程实现 Map 和 Reduce&lt;/p&gt;
 &lt;h2 id=&#34;4-数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-数据类型&#34;&gt;#&lt;/a&gt; 4、 数据类型&lt;/h2&gt;
-&lt;p&gt;MapReduce 处理的数据类型是 &amp;lt;key,value&amp;gt; 键值对&lt;br /&gt;
-・Map: (k1; v1)→[ ( k2; V2) ]&lt;br /&gt;
-·Reduce: ( k2; [v2] )-[ (k3;  v3) ]&lt;/p&gt;
-&lt;p&gt;一个完整的 mapreduce 程序在分布式运行时有三类实例进程&lt;/p&gt;
+&lt;p&gt;MapReduce 处理的数据类型是 &amp;lt;key,value&amp;gt; 键值对&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Map: ( k1; v1)→[ ( k2; V2) ]&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Reduce: ( k2; [v2] )-[ (k3;  v3) ]&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;一个完整的 mapreduce 程序在分布式运行时有三类实例进程&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;MRAppMaster 负责整个程序的过程调度及状态协调&lt;/li&gt;
 &lt;li&gt;MapTask 负责 map 阶段的整个数据处理流程&lt;/li&gt;

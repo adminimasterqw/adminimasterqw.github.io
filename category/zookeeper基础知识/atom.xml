@@ -5,9 +5,9 @@
     <link href="https://methiony.work" />
     <updated>2020-11-23T11:33:46.000Z</updated>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
         <title>Zookeeper的API操作</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -32,9 +32,9 @@
         <updated>2020-11-23T11:33:46.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/</id>
         <title>Zookeeper的watch和选举机制</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -63,9 +63,9 @@
         <updated>2020-11-23T10:50:38.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
         <title>Zookeeper基础知识</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -188,9 +188,9 @@
         <updated>2020-11-23T06:50:40.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
+        <id>https://methiony.work/2020/11/21/Hadoop/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
         <title>Zookeeper快速搭建</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/21/Hadoop/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;

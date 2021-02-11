@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://methiony.work</id>
+    <title>Andrésen • Posts by &#34;python&#34; category</title>
+    <link href="https://methiony.work" />
+    <updated>2021-02-08T13:09:52.000Z</updated>
+    <entry>
+        <id>https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/</id>
+        <title>FlaskWeb开发</title>
+        <link rel="alternate" href="https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;br /&gt;
+书籍：FlaskWeb 开发：基于 Python 的 Web 应用开发实战 @Flask Web Development by Miguel Grinberg (O’Reilly). Copyright 2014 Miguel Grinberg, 978-1-449-3726-2&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;flask简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#flask简介&#34;&gt;#&lt;/a&gt; Flask 简介&lt;/h1&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;Flask（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZsYXNrLnBvY29vLm9yZy8lRUYlQkMlODklRTklODMlQkQlRTclQUUlOTclRTYlOTglQUYlRTUlQjAlOEYlRTUlOUUlOEIlRTYlQTElODYlRTYlOUUlQjYlRUYlQkMlOEMlRTUlQjAlOEYlRTUlODglQjAlRTUlOEYlQUYlRTQlQkIlQTUlRTclQTclQjAlRTQlQjglQkElRTIlODAlOUMlRTUlQkUlQUUlRTYlQTElODY=&#34;&gt;http://flask.pocoo.org/）都算是小型框架，小到可以称为 “微框&lt;/span&gt; 架”，Flask 自开发伊始就被设计为可扩展的框架， 它具有一个包含基本服务的强健核心，其他功能则可通过扩展实现。你可以自己挑选所需 的扩展包，组成一个没有附加功能的精益组合，从而完全精确满足自身需求。&lt;/p&gt;
+&lt;h2 id=&#34;组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组成&#34;&gt;#&lt;/a&gt; 组成&lt;/h2&gt;
+&lt;p&gt;Flask 有两个主要依赖：路由、调试和 Web 服务器网关接口（Web Server Gateway Interface， WSGI）子系统由 Werkzeug（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dlcmt6ZXVnLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRUYlQkMlOUIlRTYlQTglQTElRTYlOUQlQkYlRTclQjMlQkIlRTclQkIlOUYlRTclOTQlQjE=&#34;&gt;http://werkzeug.pocoo.org/）提供；模板系统由&lt;/span&gt; Jinja2（http:// &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ppbmphLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRTMlODAlODJXZXJremV1Zw==&#34;&gt;jinja.pocoo.org/）提供。Werkzeug&lt;/span&gt; 和 Jinjia2 都是由 Flask 的核心开发者开发而成。&lt;/p&gt;
+&lt;h2 id=&#34;环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境搭建&#34;&gt;#&lt;/a&gt; 环境搭建&lt;/h2&gt;
+&lt;p&gt;本章主要介绍 Pycharm 编辑器下的环境启动&lt;/p&gt;
+&lt;p&gt;文件 -&amp;gt; 新建项目 -&amp;gt;flask&lt;/p&gt;
+&lt;p&gt;虚拟环境使用第三方实用工具 virtualenv 创建。&lt;/p&gt;
+&lt;p&gt;检查是否安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ virtualenv --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Linux 系统安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install python-virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;MacOS 安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo easy_install virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2021-02-08T13:09:52.000Z</updated>
+    </entry>
+</feed>

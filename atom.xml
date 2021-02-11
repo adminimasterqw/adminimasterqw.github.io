@@ -3,18 +3,47 @@
     <id>https://methiony.work</id>
     <title>Andrésen</title>
     <link href="https://methiony.work" />
-    <updated>2020-12-16T03:13:23.000Z</updated>
+    <updated>2021-02-08T13:09:52.000Z</updated>
     <entry>
-        <id>https://methiony.work/2020/12/16/Platform-construction/Hive/course-5/Hive%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+        <id>https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/</id>
+        <title>FlaskWeb开发</title>
+        <link rel="alternate" href="https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;br /&gt;
+书籍：FlaskWeb 开发：基于 Python 的 Web 应用开发实战 @Flask Web Development by Miguel Grinberg (O’Reilly). Copyright 2014 Miguel Grinberg, 978-1-449-3726-2&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;flask简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#flask简介&#34;&gt;#&lt;/a&gt; Flask 简介&lt;/h1&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
+&lt;p&gt;Flask（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZsYXNrLnBvY29vLm9yZy8lRUYlQkMlODklRTklODMlQkQlRTclQUUlOTclRTYlOTglQUYlRTUlQjAlOEYlRTUlOUUlOEIlRTYlQTElODYlRTYlOUUlQjYlRUYlQkMlOEMlRTUlQjAlOEYlRTUlODglQjAlRTUlOEYlQUYlRTQlQkIlQTUlRTclQTclQjAlRTQlQjglQkElRTIlODAlOUMlRTUlQkUlQUUlRTYlQTElODY=&#34;&gt;http://flask.pocoo.org/）都算是小型框架，小到可以称为 “微框&lt;/span&gt; 架”，Flask 自开发伊始就被设计为可扩展的框架， 它具有一个包含基本服务的强健核心，其他功能则可通过扩展实现。你可以自己挑选所需 的扩展包，组成一个没有附加功能的精益组合，从而完全精确满足自身需求。&lt;/p&gt;
+&lt;h2 id=&#34;组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组成&#34;&gt;#&lt;/a&gt; 组成&lt;/h2&gt;
+&lt;p&gt;Flask 有两个主要依赖：路由、调试和 Web 服务器网关接口（Web Server Gateway Interface， WSGI）子系统由 Werkzeug（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dlcmt6ZXVnLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRUYlQkMlOUIlRTYlQTglQTElRTYlOUQlQkYlRTclQjMlQkIlRTclQkIlOUYlRTclOTQlQjE=&#34;&gt;http://werkzeug.pocoo.org/）提供；模板系统由&lt;/span&gt; Jinja2（http:// &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ppbmphLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRTMlODAlODJXZXJremV1Zw==&#34;&gt;jinja.pocoo.org/）提供。Werkzeug&lt;/span&gt; 和 Jinjia2 都是由 Flask 的核心开发者开发而成。&lt;/p&gt;
+&lt;h2 id=&#34;环境搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境搭建&#34;&gt;#&lt;/a&gt; 环境搭建&lt;/h2&gt;
+&lt;p&gt;本章主要介绍 Pycharm 编辑器下的环境启动&lt;/p&gt;
+&lt;p&gt;文件 -&amp;gt; 新建项目 -&amp;gt;flask&lt;/p&gt;
+&lt;p&gt;虚拟环境使用第三方实用工具 virtualenv 创建。&lt;/p&gt;
+&lt;p&gt;检查是否安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ virtualenv --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Linux 系统安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install python-virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;MacOS 安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo easy_install virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2021-02-08T13:09:52.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://methiony.work/2020/12/16/Hadoop/Hive/course-5/Hive%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
         <title>Hive启动报错问题解决方案</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/16/Platform-construction/Hive/course-5/Hive%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/16/Hadoop/Hive/course-5/Hive%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
         <content type="html"></content>
         <updated>2020-12-16T03:13:23.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/14/Platform-construction/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</id>
+        <id>https://methiony.work/2020/12/14/Hadoop/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</id>
         <title>Hadoop集群文件配置参数详解</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/14/Platform-construction/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/14/Hadoop/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"/>
         <content type="html">&lt;div class=&#34;note warning&#34;&gt;
 &lt;p&gt;及时复习！！&lt;/p&gt;
 &lt;/div&gt;
@@ -28,9 +57,9 @@
         <updated>2020-12-14T06:47:57.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/</id>
         <title>三种Hadoop集群的文件配置参数</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hadoop/course-2/Hadoop%E9%9B%86%E7%BE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/"/>
         <content type="html">&lt;h1 id=&#34;hadoop高可用集群的文件配置参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hadoop高可用集群的文件配置参数&#34;&gt;#&lt;/a&gt; Hadoop 高可用集群的文件配置参数&lt;/h1&gt;
 &lt;h2 id=&#34;core-sitexml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#core-sitexml&#34;&gt;#&lt;/a&gt; core-site.xml&lt;/h2&gt;
 &lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定 hdfs 的 nameservice 为 mycluster (这个可以自定义)--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;fs.defaultFS&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;hdfs://mycluster/&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定 hadoop 工作目录 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;hadoop.tmp.dir&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;/home/hadoop/hadoopdata/&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定 zookeeper 集群访问地址 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ha.zookeeper.quorum&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;hadoop01:2181,hadoop02:2181,hadoop03:2181&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;hdfs-sitexml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hdfs-sitexml&#34;&gt;#&lt;/a&gt; hdfs-site.xml&lt;/h2&gt;
@@ -50,9 +79,9 @@
         <updated>2020-12-04T08:41:39.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hadoop/course-2/Hdaoop%E7%9A%84%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hadoop/course-2/Hdaoop%E7%9A%84%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
         <title>Hdaoop的伪分布式集群搭建</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hadoop/course-2/Hdaoop%E7%9A%84%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hadoop/course-2/Hdaoop%E7%9A%84%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -63,9 +92,9 @@
         <updated>2020-12-04T03:40:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
         <title>Hive的基本概念</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -154,9 +183,9 @@
         <updated>2020-12-04T01:23:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</id>
         <title>Hive的调优</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -166,9 +195,9 @@
         <updated>2020-12-04T00:48:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</id>
         <title>Hive的数据存储格式</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -189,9 +218,9 @@
         <updated>2020-12-04T00:47:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</id>
         <title>Hive的数据压缩</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -280,9 +309,9 @@
         <updated>2020-12-04T00:47:27.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</id>
         <title>Hive的函数</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -346,9 +375,9 @@
         <updated>2020-12-04T00:47:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</id>
         <title>Hive Shell参数</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -387,9 +416,9 @@
         <updated>2020-12-04T00:46:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</id>
         <title>Hive的查询语法</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -477,9 +506,9 @@ Hⅳve 支持通常的 SQL JOIN 语句，但是只支持等值连接，不支持
         <updated>2020-12-04T00:46:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
         <title>Hive的基本操作</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -563,9 +592,9 @@ SEQUENCEFILE。&lt;/p&gt;
         <updated>2020-12-04T00:46:02.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/28/Platform-construction/MySQL/course-6/Centos7%E4%B8%8BLinux%E7%B3%BB%E7%BB%9FMySQL%E5%AE%89%E8%A3%85/</id>
+        <id>https://methiony.work/2020/11/28/MySQL/course-1/Centos7%E4%B8%8BLinux%E7%B3%BB%E7%BB%9FMySQL%E5%AE%89%E8%A3%85/</id>
         <title>Centos7下Linux系统MySQL安装</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/28/Platform-construction/MySQL/course-6/Centos7%E4%B8%8BLinux%E7%B3%BB%E7%BB%9FMySQL%E5%AE%89%E8%A3%85/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/28/MySQL/course-1/Centos7%E4%B8%8BLinux%E7%B3%BB%E7%BB%9FMySQL%E5%AE%89%E8%A3%85/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程：Linux 下安装 mysql-5.7.24@&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vdS8yMGVjN2U5OWY5MDA=&#34;&gt;开心跳蚤&lt;/span&gt;&lt;/p&gt;
@@ -598,9 +627,9 @@ SEQUENCEFILE。&lt;/p&gt;
         <updated>2020-11-28T04:32:27.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/28/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</id>
+        <id>https://methiony.work/2020/11/28/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</id>
         <title>Yarn的参数设置</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/28/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/28/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"/>
         <content type="html">&lt;h1 id=&#34;1-yarn的调度器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-yarn的调度器&#34;&gt;#&lt;/a&gt; 1、yarn 的调度器&lt;/h1&gt;
 &lt;p&gt;yarn 我们都知道主要是用于做资源调度，任务分配等功能的，hadoop 支持好几种任务的调度方式，不同的场景需要使用不同的任务调度器.&lt;/p&gt;
 &lt;h2 id=&#34;fif0-scheduler队列调度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fif0-scheduler队列调度&#34;&gt;#&lt;/a&gt; FIF0 Scheduler (队列调度)&lt;/h2&gt;
@@ -630,9 +659,9 @@ SEQUENCEFILE。&lt;/p&gt;
         <updated>2020-11-28T02:20:28.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</id>
+        <id>https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</id>
         <title>Hive概述</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -695,9 +724,9 @@ Volatile) 和时变的 (Time-Variant) 数据集合，用以支持管理决策.&l
         <updated>2020-11-27T14:30:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
+        <id>https://methiony.work/2020/11/27/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
         <title>Yarn的基本概述</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;h1 id=&#34;1-yarn的介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-yarn的介绍&#34;&gt;#&lt;/a&gt; 1、yarn 的介绍&lt;/h1&gt;
 &lt;p&gt;yarn 是 hadoop 集群当中的资源管理系统模块，从 hadoop2.0 始引入 yarn 模块 yarn 可为各类计算框架提供资源的管理和调度，主要用于管理集群当中的资源 (主要是服务器的各种硬件资源，包括 CPU, 内存，磁盘，网络 1o 等) 以及调度运行在 yarn 上面的各种任务&lt;/p&gt;
 &lt;p&gt;yarn 核心出发点是为了分离资源管理与作业监控，实现分离的做法是拥有一个全局的资源管理 (ResourceManager,RM), 以及每个应用程序对应一个的应用管理器 (Application Master, AM)&lt;/p&gt;
@@ -725,9 +754,9 @@ Volatile) 和时变的 (Time-Variant) 数据集合，用以支持管理决策.&l
         <updated>2020-11-27T13:56:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+        <id>https://methiony.work/2020/11/27/Hadoop/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
         <title>MapReduce基本概念</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Hadoop/Mapreduce/course-3/MapReduce%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -772,9 +801,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-27T09:56:36.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/26/Platform-construction/Hadoop/course-2/Hadoop%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
+        <id>https://methiony.work/2020/11/26/Hadoop/Hadoop/course-2/Hadoop%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
         <title>Hadoop高可用集群搭建</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/26/Platform-construction/Hadoop/course-2/Hadoop%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/26/Hadoop/Hadoop/course-2/Hadoop%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -973,9 +1002,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-26T07:42:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
+        <id>https://methiony.work/2020/11/25/Hadoop/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
         <title>HDFS的API操作</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/25/Hadoop/Hadoop/course-2/HDFS%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -985,9 +1014,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-25T13:00:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</id>
+        <id>https://methiony.work/2020/11/25/Hadoop/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</id>
         <title>HDFS的文件及元数据管理</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/25/Platform-construction/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/25/Hadoop/Hadoop/course-2/HDFS%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%83%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1028,9 +1057,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-25T10:55:15.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</id>
+        <id>https://methiony.work/2020/11/24/Hadoop/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/</id>
         <title>Hadoop基本介绍及相关知识</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/24/Platform-construction/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/24/Hadoop/Hadoop/course-2/Hadoop%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1210,9 +1239,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-24T03:28:23.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/</id>
         <title>Zookeeper的API操作</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84API%E6%93%8D%E4%BD%9C/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1237,9 +1266,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-23T11:33:46.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/</id>
         <title>Zookeeper的watch和选举机制</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E7%9A%84watch%E6%9C%BA%E5%88%B6/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1268,9 +1297,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-23T10:50:38.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+        <id>https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
         <title>Zookeeper基础知识</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/23/Platform-construction/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/23/Hadoop/Zookeeper/course-1/Zookeeper%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1393,9 +1422,9 @@ MapReduce 设计并提供了统一的计算框架，隐藏了绝大多数系统�
         <updated>2020-11-23T06:50:40.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/21/Platform-construction/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
+        <id>https://methiony.work/2020/11/21/Hadoop/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
         <title>Hadoop分布式集群搭建</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/21/Platform-construction/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/21/Hadoop/Hadoop/course-2/Hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1513,9 +1542,9 @@ ResourceManager：接收用户的计算请求任务，并负责集群的资源�
         <updated>2020-11-21T11:19:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
+        <id>https://methiony.work/2020/11/21/Hadoop/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/</id>
         <title>Zookeeper快速搭建</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/21/Platform-construction/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/21/Hadoop/Zookeeper/course-1/Zookeeper%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记和习题整理&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -1546,9 +1575,9 @@ ResourceManager：接收用户的计算请求任务，并负责集群的资源�
         <updated>2020-11-21T09:40:19.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/19/Platform-construction/Hbase/Hbase/</id>
+        <id>https://methiony.work/2020/11/19/Hadoop/Hbase/Hbase/</id>
         <title>Hbase</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/19/Platform-construction/Hbase/Hbase/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/19/Hadoop/Hbase/Hbase/"/>
         <content type="html">&lt;h1 id=&#34;hbase基础系列1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hbase基础系列1&#34;&gt;#&lt;/a&gt; Hbase 基础系列（1）&lt;/h1&gt;
 &lt;h2 id=&#34;1-hbase定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-hbase定义&#34;&gt;#&lt;/a&gt; 1、 HBase 定义&lt;/h2&gt;
 &lt;p&gt;HBase 是一种分布式、可扩展、支持海量数据存储的 NoSQL 数据库。&lt;/p&gt;
@@ -1691,9 +1720,9 @@ ResourceManager：接收用户的计算请求任务，并负责集群的资源�
         <updated>2020-11-19T07:53:18.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/15/MySQL/</id>
+        <id>https://methiony.work/2020/11/15/MySQL/course-1/MySQL/</id>
         <title>MySQL</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/15/MySQL/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/15/MySQL/course-1/MySQL/"/>
         <content type="html">&lt;h2 id=&#34;mysql服务的登录和退出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql服务的登录和退出&#34;&gt;#&lt;/a&gt; MySql 服务的登录和退出&lt;/h2&gt;
 &lt;p&gt;​		方式一：通过 mysql 自带的客户端：只限于 root 用户&lt;/p&gt;
 &lt;p&gt;​		方式二：通过 Windows 自带的客户端：1、登录：&lt;/p&gt;

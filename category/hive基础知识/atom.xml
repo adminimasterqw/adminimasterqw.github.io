@@ -5,9 +5,9 @@
     <link href="https://methiony.work" />
     <updated>2020-12-04T01:23:45.000Z</updated>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</id>
         <title>Hive的基本概念</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -96,9 +96,9 @@
         <updated>2020-12-04T01:23:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</id>
         <title>Hive的调优</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -108,9 +108,9 @@
         <updated>2020-12-04T00:48:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</id>
         <title>Hive的数据存储格式</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -131,9 +131,9 @@
         <updated>2020-12-04T00:47:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</id>
         <title>Hive的数据压缩</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -222,9 +222,9 @@
         <updated>2020-12-04T00:47:27.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</id>
         <title>Hive的函数</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -288,9 +288,9 @@
         <updated>2020-12-04T00:47:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</id>
         <title>Hive Shell参数</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -329,9 +329,9 @@
         <updated>2020-12-04T00:46:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</id>
         <title>Hive的查询语法</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -419,9 +419,9 @@ Hⅳve 支持通常的 SQL JOIN 语句，但是只支持等值连接，不支持
         <updated>2020-12-04T00:46:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+        <id>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
         <title>Hive的基本操作</title>
-        <link rel="alternate" href="https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+        <link rel="alternate" href="https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;
@@ -505,9 +505,9 @@ SEQUENCEFILE。&lt;/p&gt;
         <updated>2020-12-04T00:46:02.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</id>
+        <id>https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</id>
         <title>Hive概述</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
 课程： 大数据自学教程 Hadoop 从零到精通完整版 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTg2Mzg5MDQ5&#34;&gt;黑马程序员大数据教程&lt;/span&gt;&lt;br /&gt;

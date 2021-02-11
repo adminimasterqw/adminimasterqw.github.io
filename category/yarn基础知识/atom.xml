@@ -5,9 +5,9 @@
     <link href="https://methiony.work" />
     <updated>2020-11-28T02:20:28.000Z</updated>
     <entry>
-        <id>https://methiony.work/2020/11/28/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</id>
+        <id>https://methiony.work/2020/11/28/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</id>
         <title>Yarn的参数设置</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/28/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/28/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/"/>
         <content type="html">&lt;h1 id=&#34;1-yarn的调度器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-yarn的调度器&#34;&gt;#&lt;/a&gt; 1、yarn 的调度器&lt;/h1&gt;
 &lt;p&gt;yarn 我们都知道主要是用于做资源调度，任务分配等功能的，hadoop 支持好几种任务的调度方式，不同的场景需要使用不同的任务调度器.&lt;/p&gt;
 &lt;h2 id=&#34;fif0-scheduler队列调度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fif0-scheduler队列调度&#34;&gt;#&lt;/a&gt; FIF0 Scheduler (队列调度)&lt;/h2&gt;
@@ -37,9 +37,9 @@
         <updated>2020-11-28T02:20:28.000Z</updated>
     </entry>
     <entry>
-        <id>https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
+        <id>https://methiony.work/2020/11/27/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/</id>
         <title>Yarn的基本概述</title>
-        <link rel="alternate" href="https://methiony.work/2020/11/27/Platform-construction/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://methiony.work/2020/11/27/Hadoop/Yarn/course-4/Yarn%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;h1 id=&#34;1-yarn的介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-yarn的介绍&#34;&gt;#&lt;/a&gt; 1、yarn 的介绍&lt;/h1&gt;
 &lt;p&gt;yarn 是 hadoop 集群当中的资源管理系统模块，从 hadoop2.0 始引入 yarn 模块 yarn 可为各类计算框架提供资源的管理和调度，主要用于管理集群当中的资源 (主要是服务器的各种硬件资源，包括 CPU, 内存，磁盘，网络 1o 等) 以及调度运行在 yarn 上面的各种任务&lt;/p&gt;
 &lt;p&gt;yarn 核心出发点是为了分离资源管理与作业监控，实现分离的做法是拥有一个全局的资源管理 (ResourceManager,RM), 以及每个应用程序对应一个的应用管理器 (Application Master, AM)&lt;/p&gt;

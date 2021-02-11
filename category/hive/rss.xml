@@ -8,9 +8,9 @@
         <pubDate>Fri, 04 Dec 2020 09:23:45 +0800</pubDate>
         <lastBuildDate>Fri, 04 Dec 2020 09:23:45 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
             <title>Hive的基本概念</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
             <pubDate>Fri, 04 Dec 2020 09:23:45 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -99,9 +99,9 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;bin/hive -f /usr/local/src/hive.sql&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</guid>
             <title>Hive的调优</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E8%B0%83%E4%BC%98/</link>
             <pubDate>Fri, 04 Dec 2020 08:48:12 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -111,9 +111,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</guid>
             <title>Hive的数据存储格式</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F/</link>
             <pubDate>Fri, 04 Dec 2020 08:47:45 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -134,9 +134,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</guid>
             <title>Hive的数据压缩</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</link>
             <pubDate>Fri, 04 Dec 2020 08:47:27 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -225,9 +225,9 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;insert overwrite &lt;span class=&#34;token builtin class-name&#34;&gt;local&lt;/span&gt; directory &lt;span class=&#34;token string&#34;&gt;&#39;/export/servers/snappy&#39;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; * from score distribute by s_id &lt;span class=&#34;token function&#34;&gt;sort&lt;/span&gt; by s_id desc&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
             <title>Hive的函数</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%87%BD%E6%95%B0/</link>
             <pubDate>Fri, 04 Dec 2020 08:47:10 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -291,9 +291,9 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; * from score where s_id not &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;01&#39;&lt;/span&gt;,&lt;span class=&#34;token string&#34;&gt;&#39;02&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</guid>
             <title>Hive Shell参数</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive-Shell%E5%8F%82%E6%95%B0/</link>
             <pubDate>Fri, 04 Dec 2020 08:46:47 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -332,9 +332,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</guid>
             <title>Hive的查询语法</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</link>
             <pubDate>Fri, 04 Dec 2020 08:46:24 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -422,9 +422,9 @@ Hⅳve 支持通常的 SQL JOIN 语句，但是只支持等值连接，不支持
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; * from score cluster by s_id&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; * from score distribute by s_id &lt;span class=&#34;token function&#34;&gt;sort&lt;/span&gt; by s_id&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
             <title>Hive的基本操作</title>
-            <link>https://methiony.work/2020/12/04/Platform-construction/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+            <link>https://methiony.work/2020/12/04/Hadoop/Hive/course-5/Hive%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
             <pubDate>Fri, 04 Dec 2020 08:46:02 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;
@@ -508,9 +508,9 @@ SEQUENCEFILE。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;drop table score5&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</guid>
+            <guid isPermalink="true">https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</guid>
             <title>Hive概述</title>
-            <link>https://methiony.work/2020/11/27/Platform-construction/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</link>
+            <link>https://methiony.work/2020/11/27/Hadoop/Hive/course-5/Hive%E6%A6%82%E8%BF%B0/</link>
             <pubDate>Fri, 27 Nov 2020 22:30:30 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;br /&gt;

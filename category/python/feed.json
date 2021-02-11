@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Andrésen • All posts by \"python\" category",
+    "description": "",
+    "home_page_url": "https://methiony.work",
+    "items": [
+        {
+            "id": "https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/",
+            "url": "https://methiony.work/2021/02/08/Python/FlaskWeb/course-1/FlaskWeb%E5%BC%80%E5%8F%91/",
+            "title": "FlaskWeb开发",
+            "date_published": "2021-02-08T13:09:52.000Z",
+            "content_html": "<div class=\"note info\">\n<p>以下为个人学习笔记<br />\n书籍：FlaskWeb 开发：基于 Python 的 Web 应用开发实战 @Flask Web Development by Miguel Grinberg (O’Reilly). Copyright 2014 Miguel Grinberg, 978-1-449-3726-2</p>\n</div>\n<h1 id=\"flask简介\"><a class=\"anchor\" href=\"#flask简介\">#</a> Flask 简介</h1>\n<h2 id=\"介绍\"><a class=\"anchor\" href=\"#介绍\">#</a> 介绍</h2>\n<p>Flask（<span class=\"exturl\" data-url=\"aHR0cDovL2ZsYXNrLnBvY29vLm9yZy8lRUYlQkMlODklRTklODMlQkQlRTclQUUlOTclRTYlOTglQUYlRTUlQjAlOEYlRTUlOUUlOEIlRTYlQTElODYlRTYlOUUlQjYlRUYlQkMlOEMlRTUlQjAlOEYlRTUlODglQjAlRTUlOEYlQUYlRTQlQkIlQTUlRTclQTclQjAlRTQlQjglQkElRTIlODAlOUMlRTUlQkUlQUUlRTYlQTElODY=\">http://flask.pocoo.org/）都算是小型框架，小到可以称为 “微框</span> 架”，Flask 自开发伊始就被设计为可扩展的框架， 它具有一个包含基本服务的强健核心，其他功能则可通过扩展实现。你可以自己挑选所需 的扩展包，组成一个没有附加功能的精益组合，从而完全精确满足自身需求。</p>\n<h2 id=\"组成\"><a class=\"anchor\" href=\"#组成\">#</a> 组成</h2>\n<p>Flask 有两个主要依赖：路由、调试和 Web 服务器网关接口（Web Server Gateway Interface， WSGI）子系统由 Werkzeug（<span class=\"exturl\" data-url=\"aHR0cDovL3dlcmt6ZXVnLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRUYlQkMlOUIlRTYlQTglQTElRTYlOUQlQkYlRTclQjMlQkIlRTclQkIlOUYlRTclOTQlQjE=\">http://werkzeug.pocoo.org/）提供；模板系统由</span> Jinja2（http:// <span class=\"exturl\" data-url=\"aHR0cDovL2ppbmphLnBvY29vLm9yZy8lRUYlQkMlODklRTYlOEYlOTAlRTQlQkUlOUIlRTMlODAlODJXZXJremV1Zw==\">jinja.pocoo.org/）提供。Werkzeug</span> 和 Jinjia2 都是由 Flask 的核心开发者开发而成。</p>\n<h2 id=\"环境搭建\"><a class=\"anchor\" href=\"#环境搭建\">#</a> 环境搭建</h2>\n<p>本章主要介绍 Pycharm 编辑器下的环境启动</p>\n<p>文件 -&gt; 新建项目 -&gt;flask</p>\n<p>虚拟环境使用第三方实用工具 virtualenv 创建。</p>\n<p>检查是否安装</p>\n<pre><code>$ virtualenv --version\n</code></pre>\n<p>Linux 系统安装</p>\n<pre><code>$ sudo apt-get install python-virtualenv\n</code></pre>\n<p>MacOS 安装</p>\n<pre><code>$ sudo easy_install virtualenv\n</code></pre>\n",
+            "tags": []
+        }
+    ]
+}
